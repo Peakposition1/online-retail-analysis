@@ -1,40 +1,81 @@
-# Online Retail Analysis
+# Online Retail Sales Analysis & Forecasting
 
 ## Project Overview
-This project analyzes an online retail dataset to understand sales patterns and customer purchasing behavior.
+This project analyzes real-world online retail transaction data to uncover sales trends and forecast future revenue. The goal is to demonstrate practical data analysis, visualization, and machine learning skills using Python.
 
-## Dataset Description
-The dataset contains transactional data including:
-- Invoice numbers
-- Product descriptions
-- Quantity
-- Unit price
-- Customer ID
-- Country
+The project covers the full data science workflow:
+- Data cleaning and feature engineering
+- Exploratory data analysis (EDA)
+- Time-based aggregation and visualization
+- Machine learning forecasting using Linear Regression
+- Model evaluation and interpretation
 
-The dataset was already clean and required no additional cleaning steps.
+---
 
-## Tools Used
-- Python
-- Pandas
-- Matplotlib
-- Jupyter Notebook
+## Dataset
+**Online Retail Dataset**
 
-## Analysis Performed
-- Exploratory data analysis
-- Sales analysis by country
-- Product-level sales analysis
-- Data visualization using bar charts
+The dataset contains transactional data from an online retail store, including:
+- Invoice numbers and dates
+- Product quantities and prices
+- Customer and country information
+
+A new **Revenue** feature was created using:
+
+---
+
+## Tools & Technologies
+- **Python**
+- **Pandas** – data manipulation
+- **Matplotlib** – data visualization
+- **Scikit-learn** – machine learning (Linear Regression)
+- **Jupyter Notebook**
+
+---
+
+## Methodology
+
+### 1. Data Cleaning & Feature Engineering
+- Converted invoice dates to datetime format
+- Created a Revenue column
+- Extracted monthly periods for time-based analysis
+
+### 2. Data Aggregation
+- Grouped transaction-level data into monthly revenue totals
+- Created a numerical time index to represent the passage of time
+
+### 3. Exploratory Data Analysis
+- Visualized monthly revenue trends
+- Identified seasonal patterns and fluctuations
+
+### 4. Machine Learning Forecasting
+- Split data into training and testing sets using a time-based split
+- Trained a Linear Regression model to predict monthly revenue
+- Generated predictions for unseen future months
+
+### 5. Model Evaluation
+- **Mean Absolute Error (MAE):** measures average prediction error
+- **R² Score:** measures how much variance in revenue the model explains
+
+---
 
 ## Key Insights
-- The United Kingdom generates the highest total sales.
-- A small number of products contribute disproportionately to total revenue.
-- Sales are concentrated in a few key regions.
+- Monthly revenue shows clear fluctuations, indicating seasonality in customer purchasing behavior
+- Linear Regression captures the overall trend but does not fully model short-term volatility
+- The model is suitable for baseline forecasting and trend analysis
 
-## Recommendations
-- Focus inventory planning on top-selling products.
-- Strengthen marketing strategies in high-performing regions.
-- Use historical sales patterns for demand forecasting.
+---
 
-## Conclusion
-This project demonstrates how data analysis can support business decision-making in retail.
+## Future Improvements
+- Apply advanced time-series models (ARIMA, Prophet)
+- Include additional features such as customer segments or country-level analysis
+- Perform hyperparameter tuning and cross-validation
+
+---
+
+## Portfolio Takeaway
+This project demonstrates the ability to:
+- Work with messy, real-world data
+- Perform end-to-end data analysis
+- Build and evaluate machine learning models
+- Communicate insights clearly for business decision-making
